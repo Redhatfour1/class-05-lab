@@ -48,9 +48,14 @@ Fourth element: "The product of 4 and 7 and 5 is 140."
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+function sumAndMultiply(p1, p2, p3) {
+  var sum = p1 + p2 + p3;
+  var product = p1 * p2 * p3;
+  return[sum, product, p1 + ' and ' + p2 + ' and ' + p3 + ' sum to ' + sum + '.', 'The product of ' + p1 + ' and ' + p2 + ' and ' + p3 + ' is ' + product + '.'];
+}
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-//testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. don't forget to create a new branch for your work on the next question!
 
@@ -112,14 +117,14 @@ function testMultiply() {
   }
 }
 //
-// function testSumAndMultiply() {
-//   if (sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.') {
-//     console.log('%c TEST FOR sumAndMultiply() PASSES', 'color: green');
-//   } else {
-//     console.log('%c TEST FOR sumAndMultiply() FAILS', 'color: red');
-//   }
-// }
-//
+function testSumAndMultiply() {
+  if (sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.') {
+    console.log('%c TEST FOR sumAndMultiply() PASSES', 'color: green');
+  } else {
+    console.log('%c TEST FOR sumAndMultiply() FAILS', 'color: red');
+  }
+}
+
 // function testSumArray() {
 //   if (sumArray(testArray)[1] === '2,3,4 was passed in as an array of numbers, and 9 is their sum.') {
 //     console.log('%c TEST FOR sumArray() PASSES', 'color: green');
